@@ -1,0 +1,15 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://idp.example.test/saml">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>MIIDCDCCAfCgAwIBAgICD6EwDQYJKoZIhvcNAQELBQAwNjEZMBcGA1UEChMQRXhhbXBsZSBUZXN0IElkUDEZMBcGA1UEAxMQaWRwLmV4YW1wbGUudGVzdDAeFw0yNTAxMDEwMDAwMDBaFw0zNTAxMDEwMDAwMDBaMDYxGTAXBgNVBAoTEEV4YW1wbGUgVGVzdCBJZFAxGTAXBgNVBAMTEGlkcC5leGFtcGxlLnRlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAcVNHhtO7zX3WSe38yWG60qRxX/qBTGc+HadUQwLWm/CqK/jvEx6/2ZrDuG32ZTA+8dNgrno6VegfKHmgAeO7x8hTCCXM06UDDMibjdPAPSI0U664IYNEI3EcDzRCsyOlUBfWTeaVqFqp3KZRse6FN0gzLsfN1o1ExoQo1yw8jzyPKzJZeUz+rxcickStdSnjwwnZLEOb+e+fANKi1mPXbRtZw9/I2MJ6l90HKaNCdGQKzPBiGidogI6nOa1XSI50Zoc1Gr6uiblrXe/k/64VMWaKgu1HCrdQJRquQz4/2XTf8rLQJgHor0qxZRqt1e3AlCoMTUEiMMp4kyB/aiSnAgMBAAGjIDAeMA4GA1UdDwEB/wQEAwIHgDAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBCwUAA4IBAQCEJHj2DcTX7/wWLKrqSCVazrS5XAi+8qWdWG8u+bkmIiFZMmU3o5ObUXOVumj5rhcDM3+Gx6/IpPyhXLE+9CvsK2GD6JsorNcEjp+W4GSOJIFRraCZ68GKWAPkh+tNoLOJBt47XOA0c4D2E51fuSNqk6zMzuFewa6mrmDlafL2HC/nic/Dmh7u06kX242vI8dqOcTIuMTsVoswlsdT5bXC1xDUCrFZknBJpKBq5ksVRB5YRcz6MI+bdIKWNPkaPdAUa3gX1rRKTdWC2+4cUmrEbK10X9kFdtS36rH6niKRrK8qk8h157QBHB3UVARcb9eOhhV8nKJe3KBLHj+I1tCk</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.test/sso"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.example.test/sso"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.test/slo"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>
